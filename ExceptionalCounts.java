@@ -33,24 +33,24 @@ public class ExceptionalCounts
                 //characterCount += line.replaceAll("\\s+", "").length();
 
                 //Brittany: Count words in the line, split by whitespace
-                //String[] words = line.trim().split("\\s+");
-                //wordCount += words.length;
+                String[] words = line.trim().split("\\s+");
+                wordCount += words.length;
                 
                 //Alexis: Count lines in the file, increment lineCount for each line read
                 lineCount++;
 
-                // Optional (for Manuel): find longest word (uncomment if desired)
-                // for (String word : words) {
-                //     if (word.length() > longestWord.length()) {
-                //         longestWord = word;
-                //     }
-                // }
+                for (String word : words) {
+                    String cleanWord = word.replaceAll("[^a-zA-Z0-9]", "");
+                    if (cleanWord.length() > longestWord.length()) {
+                        longestWord = cleanWord;
+                    }
+                }
             }
 
             //System.out.println("Number of characters: " + characterCount);
             //System.out.println("Number of words: " + wordCount);
             System.out.println("Number of lines: " + lineCount);
-            //System.out.println("Longest word: " + longestWord);
+            System.out.println("Longest word: " + longestWord);
 
             fileScanner.close();
         } catch (FileNotFoundException e) {
