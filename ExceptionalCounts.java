@@ -1,4 +1,4 @@
-//Programmers: Brittany Burson & Alexis Lariviere
+//Programmers: Manuel Brugues Amaro, Brittany Burson, & Alexis Lariviere
 //Module: 4 Problem 1
 //Date: 07/16/2026
 //Email Address: m.bruguesamaro@student.nu.edu , b.burson4211@student.nu.edu & t.lariviere7089@student.nu.edu
@@ -41,7 +41,7 @@ public class ExceptionalCounts
                 
                 //Count lines in the file, increment lineCount for each line read
                 lineCount++;
-
+                
                 //Fine longest word in the file
                 for (String word : words) {
                     String cleanWord = word.replaceAll("[^a-zA-Z0-9]", "");
