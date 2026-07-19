@@ -8,6 +8,8 @@
 
 //Updated project file header to include all project members and fix grammatical errors.
 
+//Correct syntax errors in code and final commit.
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -32,17 +34,17 @@ public class ExceptionalCounts
             while (fileScanner.hasNextLine()) {
                 String line = fileScanner.nextLine();
                 
-                Brittany: Count characters in the line, remove spaces and newlines from the count
-                //characterCount += line.replaceAll("\\s+", "").length();
+                //Count characters in the line, remove spaces and newlines from the count
+                characterCount += line.replaceAll("\\s+", "").length();
 
-                Brittany: Count words in the line, split by whitespace
+                //Count words in the line, split by whitespace
                 String[] words = line.trim().split("\\s+");
                 wordCount += words.length;
                 
                 //Count lines in the file, increment lineCount for each line read
                 lineCount++;
                 
-                //Fine longest word in the file
+                //Find longest word in the file
                 for (String word : words) {
                     String cleanWord = word.replaceAll("[^a-zA-Z0-9]", "");
                     if (cleanWord.length() > longestWord.length()) {
@@ -51,8 +53,8 @@ public class ExceptionalCounts
                 }
             }
 
-            //System.out.println("Number of characters: " + characterCount);
-            //System.out.println("Number of words: " + wordCount);
+            System.out.println("Number of characters: " + characterCount);
+            System.out.println("Number of words: " + wordCount);
             System.out.println("Number of lines: " + lineCount);
             System.out.println("Longest word: " + longestWord);
 
