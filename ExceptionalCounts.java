@@ -32,10 +32,10 @@ public class ExceptionalCounts
             while (fileScanner.hasNextLine()) {
                 String line = fileScanner.nextLine();
                 
-                //Brittany: Count characters in the line, remove spaces and newlines from the count
+                Brittany: Count characters in the line, remove spaces and newlines from the count
                 //characterCount += line.replaceAll("\\s+", "").length();
 
-                //Brittany: Count words in the line, split by whitespace
+                Brittany: Count words in the line, split by whitespace
                 String[] words = line.trim().split("\\s+");
                 wordCount += words.length;
                 
